@@ -150,7 +150,7 @@ def _get_bazel_cached_action_keys():
     # Make sure we get notified of changes to the format, since bazel dump --action_cache isn't public API.
     # We continue gracefully, rather than asserting, because we can (conservatively) continue without hitting cache.
     if not marked_as_empty and not action_keys:
-        log_warning(">>> Failed to get action keys from Bazel.\nPlease file an issue with the following log:\n", action_cache_process.stdout)
+        log_warning(">>> Failed to get action keys from Bazel.")
 
     return action_keys
 
